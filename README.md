@@ -49,7 +49,7 @@ npm run build
 ## Tentang Saya
 
 Hai, Muhammad Rafi Catur Wijayanto (username GitHub: `mraficaturw`).
-Saya seorang Developer yang suka bikin aplikasi web ringan dengan tampilan modern dan performa tinggi. Scroll aja di project saya, dan jangan sungkan untuk reach out kalau ada pertanyaan!
+Saya seorang Web Developer yang suka belajar membuat aplikasi web ringan dengan tampilan modern dan performa tinggi. Let's Connect to Grow!
 
 * **Email:** [email\_raficaturbusiness@gmail.com](mailto:raficaturbusiness@gmail.com)
 * **LinkedIn:** [linkedin.com/in/farisedp](https://www.linkedin.com/in/mraficaturw/)

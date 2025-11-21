@@ -129,7 +129,7 @@ function App() {
                 </h2>
 
                 <BlurText
-                  text="A Bachelor's degree graduate from Singaperbangsa University, Karawang, with a focus as a Web Developer and DevOps Engineer, with a track record of less than 1 year in website development. I am particularly interested in implementing Artificial Intelligence to create engaging, scalable, and high-performance digital solutions to drive your business growth."
+                  text="Undergraduate student of Singaperbangsa University Karawang, with a focus as a Web Developer and DevOps Engineer, with a track record of less than 1 year in website development. I am particularly interested in implementing Artificial Intelligence to create engaging, scalable, and high-performance digital solutions to drive your business growth."
                   delay={150}
                   animateBy="words"
                   direction="top"
@@ -207,15 +207,15 @@ function App() {
         {/* tentang */}
 
         {/* Proyek */}
-        <div className="proyek mt-32 py-10" id="project" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true"></div>
-        <h1 className="text-center text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Project</h1>
+        <div className="proyek mt-28 py-10" id="project" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true"></div>
+        <h1 className="text-center text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">My Projects</h1>
         <p className="text-base/loose text-center opacity-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">Showcasing a selection of projects that reflect my skills, creativity, and passion for building meaningful digital experiences.</p>
         <div className="proyek-box mt-14" >
 
           <div style={{ height: 'auto', position: 'relative' }} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-once="true" >
             <ChromaGrid
               items={listProyek}
-              onItemClick={handleProjectClick} // Kirim fungsi untuk handle klik
+              onItemClick={handleProjectClick}
               radius={500}
               damping={0.45}
               fadeOut={0.6}
