@@ -52,8 +52,8 @@ Hai, Muhammad Rafi Catur Wijayanto (username GitHub: `mraficaturw`).
 Saya seorang Web Developer yang suka belajar membuat aplikasi web ringan dengan tampilan modern dan performa tinggi. Let's Connect to Grow!
 
 * **Email:** [email\_raficaturbusiness@gmail.com](mailto:raficaturbusiness@gmail.com)
-* **LinkedIn:** [linkedin.com/in/farisedp](https://www.linkedin.com/in/mraficaturw/)
-* **Instagram (opsional):** @mraficw
+* **LinkedIn:** [linkedin.com/in/mraficaturw](https://www.linkedin.com/in/mraficaturw/)
+* **Instagram:** @mraficw
 
 ---
 
