@@ -1,4 +1,4 @@
-# Portofolio Web — [Rafi Catur / mraficaturw]
+# Rafi Catur's Portofolio Web
 
 Selamat datang di portofolio web pribadi saya! 🌐  
 Dibuat dengan React + Vite, ini adalah showcase dari project, skill, dan karya yang ingin saya bagikan.
@@ -47,8 +47,8 @@ npm run build
 
 ## Tentang Saya
 
-Hai, Muhammad Rafi Catur Wijayanto (username GitHub: `mraficaturw`).
-Saya seorang Web Developer yang suka belajar membuat aplikasi web ringan dengan tampilan modern dan performa tinggi. Let's Connect to Grow!
+Hai, Saya Muhammad Rafi Catur Wijayanto (username GitHub: `mraficaturw`).
+Seorang Web Developer yang suka belajar membuat aplikasi web ringan dengan tampilan modern dan performa tinggi. Let's Connect to Grow!
 
 * **Email:** [Send a Messages](mailto:raficaturbusiness@gmail.com)
 * **LinkedIn:** [mraficaturw](https://www.linkedin.com/in/mraficaturw/)
