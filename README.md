@@ -43,19 +43,19 @@ npm run build
 
 ## &#x20;Quick Preview
 
-Jika sudah di-deploy (contoh: GitHub Pages, Netlify, Vercel), kamu bisa tambahkan link deploy di sini, misalnya:
-[🔗 Lihat versi live](https://username.github.io/portofolio/)
+# Jika sudah di-deploy (contoh: GitHub Pages, Netlify, Vercel), kamu bisa tambahkan link deploy di sini, misalnya:
+[🔗 Lihat versi live](https://mraficw-portofolio.netlify.app/)
 
 ## Tentang Saya
 
 Hai, Muhammad Rafi Catur Wijayanto (username GitHub: `mraficaturw`).
 Saya seorang Developer yang suka bikin aplikasi web ringan dengan tampilan modern dan performa tinggi. Scroll aja di project saya, dan jangan sungkan untuk reach out kalau ada pertanyaan!
 
-* **Email:** [email\_raficaturbusiness@gmail.com](mailto:email_raficaturbusiness@gmail.com)
-* **LinkedIn:** [linkedin.com/in/farisedp](https://www.linkedin.com/in/farisedp/)
+* **Email:** [email\_raficaturbusiness@gmail.com](mailto:raficaturbusiness@gmail.com)
+* **LinkedIn:** [linkedin.com/in/farisedp](https://www.linkedin.com/in/mraficaturw/)
 * **Instagram (opsional):** @mraficw
 
 ---
 
 
-[1]: https://github.com/mraficaturw/portofolio "GitHub - mraficaturw/portofolio"
+[1]: https://mraficw-portofolio.netlify.app/ "GitHub - mraficaturw/portofolio"

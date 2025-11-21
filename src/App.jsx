@@ -258,7 +258,6 @@ function App() {
               <form
                 action="https://formsubmit.co/b02b8ddfc25a10b189d26da39da51442"
                 method="POST"
-                target="_blank"
                 className="bg-zinc-800 p-10 w-full rounded-md"
                 autoComplete="off"
                 data-aos="fade-up"

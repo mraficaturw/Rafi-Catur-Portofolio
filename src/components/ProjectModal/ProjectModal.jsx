@@ -49,7 +49,7 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
           className="w-full h-56 object-cover rounded-t-2xl"
         />
 
-        <div className="p-6 flex flex-col gap-4">
+        <div className="p-6 flex flex-col gap-4 overflow-y-auto h-[calc(80vh-14rem)]">
             <div className="flex justify-between items-start">
                 <h2 className="text-2xl font-bold text-white">{project.title}</h2>
                 <button
