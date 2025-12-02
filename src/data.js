@@ -157,7 +157,7 @@ export const listProyek = [
     fullDescription:"As a Full-Stack Developer, I was responsible for the end-to-end development of the SIKARIR platform. This included designing and implementing the backend with Laravel, managing the database through migrations and seeders, building the admin panel with Filament for easy management, and optimizing the frontend using Tailwind CSS and Vite. I also handled API integration, functionality testing, and deployment, ensuring the platform was ready to use and scalable. The main challenge I faced was optimizing performance for diverse job categories, which I addressed through database indexing and strategic caching.",
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
-    url: "https://github.com/mraficaturw",
+    url: "https://github.com/mraficaturw/SIKARIR",
     dad: "100",
   },
   {
