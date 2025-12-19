@@ -89,9 +89,9 @@ function App() {
               className=" mb-6"
             />
             <div className="flex items-center sm:gap-4 gap-2">
-              <a 
-                href="./assets/CV.pdf" 
-                download="Muhammad_Rafi_Catur_Wijayanto_CV.pdf" 
+              <a
+                href="./assets/CV.pdf"
+                download="Muhammad_Rafi_Catur_Wijayanto_CV.pdf"
                 className="font-semibold bg-[#1a1a1a] p-4 px-6 rounded-full border border-gray-700 hover:bg-[#222] transition-colors"
               >
                 <ShinyText text="Download CV" disabled={false} speed={3} className="custom-class" />
@@ -151,7 +151,7 @@ function App() {
                   </div>
                   <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" data-aos-once="true">
                     <h1 className="text-3xl md:text-4xl mb-1">
-                      3.64<span className="text-violet-500">/4.00</span>
+                      3.71<span className="text-violet-500">/4.00</span>
                     </h1>
                     <p>GPA</p>
                   </div>
