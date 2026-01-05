@@ -145,13 +145,13 @@ function App() {
                   </div>
                   <div>
                     <h1 className="text-3xl md:text-4xl mb-1">
-                      1<span className="text-violet-500">-</span>
+                      1<span className="text-violet-500">+</span>
                     </h1>
                     <p>Years of Experience</p>
                   </div>
                   <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" data-aos-once="true">
                     <h1 className="text-3xl md:text-4xl mb-1">
-                      3.71<span className="text-violet-500">/4.00</span>
+                      3.72<span className="text-violet-500">/4.00</span>
                     </h1>
                     <p>GPA</p>
                   </div>
@@ -207,9 +207,7 @@ function App() {
         {/* tentang */}
 
         {/* Proyek */}
-        <div className="proyek mt-28 py-10" id="project" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true"></div>
-        <h1 className="text-center text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">My Projects</h1>
-        <p className="text-base/loose text-center opacity-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">Showcasing a selection of projects that reflect my skills, creativity, and passion for building meaningful digital experiences.</p>
+        <div className="proyek mt-28" id="project" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true"></div>
         <div className="proyek-box mt-14" >
 
           <div style={{ height: 'auto', position: 'relative' }} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-once="true" >
@@ -220,7 +218,10 @@ function App() {
               damping={0.45}
               fadeOut={0.6}
               ease="power3.out"
-            />
+            >
+              <h1 className="text-center text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">My Projects</h1>
+              <p className="text-base/loose text-center opacity-50 max-w-2xl mx-auto px-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">Showcasing a selection of projects that reflect my skills, creativity, and passion for building meaningful digital experiences.</p>
+            </ChromaGrid>
           </div>
         </div>
         {/* Proyek */}

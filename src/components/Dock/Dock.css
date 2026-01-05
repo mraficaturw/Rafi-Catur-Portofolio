@@ -8,11 +8,12 @@
   width: fit-content;
   gap: 1rem;
   border-radius: 1rem;
-  background: linear-gradient(145deg, rgba(60,60,60,0.9), rgba(30,30,30,0.9));
-  border: 1px solid rgba(255,255,255,0.08);
+  background: linear-gradient(145deg, rgba(60, 60, 60, 0.9), rgba(30, 30, 30, 0.9));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   padding: 0 0.5rem 0.5rem;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .dock-item {
@@ -21,16 +22,16 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  background: linear-gradient(145deg, rgba(80,80,80,0.9), rgba(50,50,50,0.9));
-  border: 1px solid rgba(255,255,255,0.08);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  background: linear-gradient(145deg, rgba(80, 80, 80, 0.9), rgba(50, 50, 50, 0.9));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   outline: none;
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .dock-item:hover {
-  background: linear-gradient(145deg, rgba(100,100,100,0.9), rgba(60,60,60,0.9));
+  background: linear-gradient(145deg, rgba(100, 100, 100, 0.9), rgba(60, 60, 60, 0.9));
 }
 
 .dock-label {
@@ -40,8 +41,9 @@
   width: fit-content;
   white-space: pre;
   border-radius: 0.375rem;
-  border: 1px solid rgba(255,255,255,0.08);
-  background: linear-gradient(145deg, rgba(60,60,60,0.95), rgba(40,40,40,0.95));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(145deg, rgba(60, 60, 60, 0.95), rgba(40, 40, 40, 0.95));
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   padding: 0.125rem 0.5rem;
   font-size: 0.75rem;

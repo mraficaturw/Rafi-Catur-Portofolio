@@ -1,15 +1,16 @@
 .chroma-grid {
   position: relative;
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   height: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 320px));
   grid-auto-rows: auto;
   justify-content: center;
   gap: 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
+  max-width: none;
+  padding: 4rem max(1rem, calc((100vw - 1200px) / 2));
   box-sizing: border-box;
 
   --x: 50%;
@@ -20,22 +21,23 @@
 @media (min-width: 1024px) and (max-width: 1280px) {
   .chroma-grid {
     position: relative;
-    width: 100%;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
     height: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 320px));
     grid-auto-rows: auto;
     justify-content: center;
     gap: 1rem;
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 1rem;
+    max-width: none;
+    padding: 4rem max(1rem, calc((100vw - 1500px) / 2));
     box-sizing: border-box;
 
     --x: 50%;
     --y: 50%;
     --r: 220px;
-    }
+  }
 }
 
 
@@ -43,7 +45,9 @@
   .chroma-grid {
     grid-template-columns: 320px;
     gap: 0.75rem;
-    padding: 1rem;
+    grid-template-columns: 320px;
+    gap: 0.75rem;
+    padding: 2rem 1rem;
   }
 }
 
@@ -124,11 +128,11 @@
   inset: 0;
   pointer-events: none;
   z-index: 3;
-  backdrop-filter: grayscale(1) brightness(0.78);
   -webkit-backdrop-filter: grayscale(1) brightness(0.78);
+  backdrop-filter: grayscale(1) brightness(0.78);
   background: rgba(0, 0, 0, 0.001);
 
-  mask-image: radial-gradient(circle var(--r) at var(--x) var(--y),
+  -webkit-mask-image: radial-gradient(circle var(--r) at var(--x) var(--y),
       transparent 0%,
       transparent 15%,
       rgba(0, 0, 0, 0.10) 30%,
@@ -137,7 +141,7 @@
       rgba(0, 0, 0, 0.50) 75%,
       rgba(0, 0, 0, 0.68) 88%,
       white 100%);
-  -webkit-mask-image: radial-gradient(circle var(--r) at var(--x) var(--y),
+  mask-image: radial-gradient(circle var(--r) at var(--x) var(--y),
       transparent 0%,
       transparent 15%,
       rgba(0, 0, 0, 0.10) 30%,
@@ -153,11 +157,11 @@
   inset: 0;
   pointer-events: none;
   z-index: 4;
-  backdrop-filter: grayscale(1) brightness(0.78);
   -webkit-backdrop-filter: grayscale(1) brightness(0.78);
+  backdrop-filter: grayscale(1) brightness(0.78);
   background: rgba(0, 0, 0, 0.001);
 
-  mask-image: radial-gradient(circle var(--r) at var(--x) var(--y),
+  -webkit-mask-image: radial-gradient(circle var(--r) at var(--x) var(--y),
       white 0%,
       white 15%,
       rgba(255, 255, 255, 0.90) 30%,
@@ -166,7 +170,7 @@
       rgba(255, 255, 255, 0.50) 75%,
       rgba(255, 255, 255, 0.32) 88%,
       transparent 100%);
-  -webkit-mask-image: radial-gradient(circle var(--r) at var(--x) var(--y),
+  mask-image: radial-gradient(circle var(--r) at var(--x) var(--y),
       white 0%,
       white 15%,
       rgba(255, 255, 255, 0.90) 30%,

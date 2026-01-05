@@ -17,6 +17,10 @@ import Tools14 from "/assets/tools/css.png";
 import Tools15 from "/assets/tools/php.png";
 import Tools16 from "/assets/tools/vite.png";
 import Tools17 from "/assets/tools/mysql.png";
+import Tools18 from "/assets/tools/typescript.png";
+import Tools19 from "/assets/tools/golang.png";
+import Tools20 from "/assets/tools/capcut.png";
+import Tools21 from "/assets/tools/antigravity.png";
 
 
 export const listTools = [
@@ -136,83 +140,107 @@ export const listTools = [
     id: 17,
     gambar: Tools17,
     nama: "MySql",
-    ket: "Framework",
+    ket: "Database",
     dad: "1900",
+  },
+  {
+    id: 18,
+    gambar: Tools18,
+    nama: "TypeScript",
+    ket: "Language",
+    dad: "2000",
+  },
+  {
+    id: 19,
+    gambar: Tools19,
+    nama: "Golang",
+    ket: "Language",
+    dad: "2100",
+  },
+  {
+    id: 20,
+    gambar: Tools20,
+    nama: "CapCut",
+    ket: "Video Editor",
+    dad: "2200",
+  },
+  {
+    id: 21,
+    gambar: Tools21,
+    nama: "Antigravity",
+    ket: "Code Editor AI Assistant",
+    dad: "2300",
   },
 ];
 
-import Proyek1 from "/assets/proyek/proyek1.jpg";
-import Proyek2 from "/assets/proyek/proyek2.jpg";
-import Proyek3 from "/assets/proyek/proyek3.jpg";
-import Proyek4 from "/assets/proyek/proyek4.jpg";
-import Proyek5 from "/assets/proyek/proyek5.jpg";
-import Proyek6 from "/assets/proyek/proyek6.jpg";
+import Proyek1 from "/assets/proyek/proyek1.webp";
+import Proyek2 from "/assets/proyek/proyek2.webp";
+import Proyek3 from "/assets/proyek/proyek3.webp";
+import Proyek4 from "/assets/proyek/proyek4.webp";
+import Proyek5 from "/assets/proyek/proyek5.webp";
+import Proyek6 from "/assets/proyek/proyek6.webp";
+// import Proyek7 from "/assets/proyek/proyek7.webp";
+// import Proyek8 from "/assets/proyek/proyek8.webp";
+// import Proyek9 from "/assets/proyek/proyek9.webp";
 
 export const listProyek = [
   {
     id: 1,
     image: Proyek1,
     title: "SIKARIR Web App",
-    subtitle: "This platform helps UNSIKA students find internships...",
-    fullDescription:"As a Full-Stack Developer, I was responsible for the end-to-end development of the SIKARIR platform. This included designing and implementing the backend with Laravel, managing the database through migrations and seeders, building the admin panel with Filament for easy management, and optimizing the frontend using Tailwind CSS and Vite. I also handled API integration, functionality testing, and deployment, ensuring the platform was ready to use and scalable. The main challenge I faced was optimizing performance for diverse job categories, which I addressed through database indexing and strategic caching.",
-    borderColor: "#3B82F6",
-    gradient: "linear-gradient(145deg, #3B82F6, #000)",
-    url: "https://github.com/mraficaturw/SIKARIR",
+    subtitle: "Full-stack internship platform connecting students with opportunities",
+    fullDescription: "Campus project demonstrating full-stack capabilities by building an internship platform. Developed complete backend with Laravel (migrations, seeders, REST API), admin panel using Filament for content management, and responsive frontend with Tailwind CSS + Vite. Implemented database optimization techniques including indexing and caching for scalability.",
+    gradient: "linear-gradient(145deg, #00B074, #000)",
+    url: "https://github.com/mraficaturw/",
     dad: "100",
   },
   {
     id: 2,
     image: Proyek2,
     title: "Personal Web Portfolio",
-    subtitle: "An interactive web portfolio showcasing my professional journey...",
-    fullDescription:"An interactive web portfolio showcasing my professional journey, skills, and projects. Designed with a clean yet modern aesthetic, the portfolio highlights my technical expertise in web development, software engineering, and IoT. The site also serves as a central hub for potential employers and collaborators to explore my works, reflecting both my creativity and technical precision.",
-    borderColor: "#10B981",
-    gradient: "linear-gradient(180deg, #10B981, #000)",
-    url: "https://github.com/mraficaturw",
+    subtitle: "Interactive portfolio showcasing projects and professional journey",
+    fullDescription: "Self-designed portfolio website featuring modern UI animations, dark mode, and responsive layouts. Built with React + Vite, implementing smooth transitions and glassmorphism design principles. Serves as a comprehensive showcase of my technical skills, completed projects, and development approach.",
+    gradient: "linear-gradient(180deg, #3B82F6, #000)",
+    url: "https://github.com/mraficaturw/",
     dad: "200",
   },
   {
     id: 3,
     image: Proyek3,
     title: "Tix Concert",
-    subtitle: "TixConcert is a modern front-end web application for concert ticket booking...",
-    fullDescription:"In the development of TixConcert, a React-based concert ticketing platform, I solved complex problems such as synchronizing authentication and cart states using Zustand with persist middleware to prevent data loss during navigation, and implementing modular components such as TicketSelector for efficient handling of quantity updates; improved web performance through Vite which accelerated build time, lazy loading of routes for lightweight initial load, and caching with React Query which reduced repeated API calls, ensuring a responsive application with smooth animations and optimal bundle size; as a full-stack frontend developer, my role included designing the application architecture from scratch, integrating TypeScript for type safety, optimizing UX with Tailwind CSS and shadcn/ui, and ensuring code scalability for features such as e-ticket QR codes and user dashboards, demonstrating skills in technical problem-solving and delivering a robust e-commerce application.",
-    borderColor: "#3B82F6",
-    gradient: "linear-gradient(145deg, #3B82F6, #000)",
+    subtitle: "Concert ticketing platform with cart management and QR code generation",
+    fullDescription: "Personal e-commerce project built to master React + TypeScript and state management. Implemented persistent shopping cart using Zustand with local storage, modular ticket selection components, and QR code generation for e-tickets. Optimized performance through lazy loading, React Query caching, and code splitting. Features include user authentication, responsive UI with shadcn/ui, and scalable component architecture.",
     url: "https://github.com/mraficaturw/TixConcert-frontend/",
     dad: "300",
   },
   {
     id: 4,
     image: Proyek4,
-    title: "Self-Ordering System",
-    subtitle: "Self-Ordering System for Culinary Product",
-    fullDescription:"Self-Ordering System for Culinary Products that has many variants, developed to streamline the ordering process in food establishments. This system allows customers to browse the menu, customize their orders, and make payments directly from their devices. The application enhances customer experience by reducing wait times and minimizing errors in order processing. This project showcases my skills in creating efficient and user-friendly solutions for the food service industry.",
-    borderColor: "#10B981",
-    gradient: "linear-gradient(180deg, #10B981, #000)",
-    url: "https://github.com/mraficaturw",
+    title: "MentorSphere LMS",
+    subtitle: "Learning management system with course creation and progress tracking",
+    fullDescription: "Portfolio project demonstrating frontend development skills in educational technology. Built responsive UI components for course management, student progress tracking, and interactive learning materials. Ensured cross-browser compatibility and implemented smooth user interactions. Designed to showcase API integration skills and modern React development patterns.",
+    gradient: "linear-gradient(145deg, #3B6FFF, #000)",
+    url: "https://github.com/mraficaturw/MentorSpehere-LMS",
     dad: "400",
   },
-    {
+  {
     id: 5,
     image: Proyek5,
-    title: "OPER Website",
-    subtitle: "A Learning Management Platform for Sports Teacher and Students.",
-    fullDescription: "A Learning Management Platform for Sports Teachers and Students, designed to facilitate online education in physical education. The platform allows teachers to create and manage courses, share resources, and track student progress. Students can access course materials, submit assignments, and engage in interactive learning activities. This project highlights my ability to develop educational technology solutions that enhance learning experiences and support remote education.",
-    borderColor: "#3B82F6",
-    gradient: "linear-gradient(145deg, #3B82F6, #000)",
+    title: "Atlas Creative Studio",
+    subtitle: "Agency website template with modern animations and service showcases",
+    fullDescription: "Personal project creating a premium agency website template with conversion-focused design. Built with React 18 + TypeScript, featuring service showcases, portfolio galleries, and testimonials. Implemented form validation using React Hook Form + Zod, and optimized performance with TanStack Query. Demonstrates ability to create polished, production-ready interfaces.",
+    gradient: "linear-gradient(180deg, #10B981, #000)",
     url: "https://github.com/mraficaturw",
     dad: "500",
   },
   {
     id: 6,
     image: Proyek6,
-    title: "SkeduApp",
-    subtitle: "Application that helps students to manage their tasks or assignments.",
-    fullDescription:"I worked with figma to help team designing Application that helps students to manage their tasks or assignments. This project demonstrates my ability to collaborate with design teams and contribute to the development of user-centric applications that enhance productivity and organization for students.",
-    borderColor: "#10B981",
-    gradient: "linear-gradient(180deg, #10B981, #000)",
-    url: "https://github.com/mraficaturw",
+    title: "DigitalCraft Studio",
+    subtitle: "E-commerce showcase platform with glassmorphism UI design",
+    fullDescription: "Portfolio project showcasing e-commerce frontend development skills. Implemented pixel-perfect responsive design with glassmorphism effects, dynamic product displays, and smooth animations. Built using React 18 + TypeScript, shadcn/ui components, and TanStack Query for state management. Features include product galleries, contact forms, and client-side routing with React Router DOM.",
+    gradient: "linear-gradient(145deg, #8B5CF6, #000)",
+    url: "https://github.com/mraficaturw/digital-showcase-hub",
     dad: "600",
   },
 ];
