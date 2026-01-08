@@ -13,7 +13,7 @@ const Footer = () => {
     <div className="mt-32 pb-8 flex flex-col items-center relative z-10">
       {/* Flex container adaptif */}
       <div className="w-full flex flex-col md:flex-row items-center md:justify-between gap-6">
-        
+
         {/* Judul - paling atas di mobile */}
         <h1 className="text-2xl font-bold order-1 md:order-none">
           Portofolio
@@ -28,7 +28,7 @@ const Footer = () => {
 
         {/* Dock - paling bawah di mobile */}
         <div className="order-3 md:order-none mt-15 md:mt-0  md:mb-0">
-          <Dock 
+          <Dock
             items={items}
             panelHeight={30}
             baseItemSize={60}

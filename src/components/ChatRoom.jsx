@@ -66,7 +66,7 @@ export default function ChatRoom() {
       )}
 
       {/* Area pesan */}
-      <div className="h-72 overflow-y-auto border border-gray-700 p-3 rounded-lg bg-zinc-800 mb-4 space-y-3">
+      <div className="h-72 overflow-y-auto border border-gray-700 p-3 rounded-lg bg-zinc-800 mb-4 space-y-3 chat-scrollbar">
         {messages.map((msg) => (
           <div
             key={msg.id}
@@ -80,11 +80,10 @@ export default function ChatRoom() {
               />
             )}
             <div
-              className={`p-3 rounded-lg max-w-[75%] ${
-                msg.uid === user?.uid
-                  ? "bg-blue-500 text-white"
-                  : "bg-gray-700 text-white"
-              }`}
+              className={`p-3 rounded-lg max-w-[75%] ${msg.uid === user?.uid
+                ? "bg-blue-500 text-white"
+                : "bg-gray-700 text-white"
+                }`}
             >
               <div className="text-xs opacity-70 mb-1">{msg.displayName}</div>
               <div>{msg.text}</div>
