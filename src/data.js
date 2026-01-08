@@ -179,7 +179,7 @@ import Proyek3 from "/assets/proyek/proyek3.webp";
 import Proyek4 from "/assets/proyek/proyek4.webp";
 import Proyek5 from "/assets/proyek/proyek5.webp";
 import Proyek6 from "/assets/proyek/proyek6.webp";
-// import Proyek7 from "/assets/proyek/proyek7.webp";
+import Proyek7 from "/assets/proyek/proyek7.webp";
 // import Proyek8 from "/assets/proyek/proyek8.webp";
 // import Proyek9 from "/assets/proyek/proyek9.webp";
 
@@ -242,5 +242,15 @@ export const listProyek = [
     gradient: "linear-gradient(145deg, #8B5CF6, #000)",
     url: "https://github.com/mraficaturw/digital-showcase-hub",
     dad: "600",
+  },
+  {
+    id: 7,
+    image: Proyek7,
+    title: "Laundry Invoice PWA",
+    subtitle: "Smart Digital Invoicing for Laundry Businesses",
+    fullDescription: "Addressed the inefficiencies of manual invoicing in small-scale laundry businesses. Developed a Progressive Web App (PWA) to provide an offline-first, installable digital solution that streamlines operations. Built with Golang to leverage its speed and concurrency for a robust, high-performance backend, ensuring reliable data handling.",
+    gradient: "linear-gradient(145deg, #0EA5E9, #000)",
+    url: "https://github.com/mraficaturw/",
+    dad: "700",
   },
 ];
