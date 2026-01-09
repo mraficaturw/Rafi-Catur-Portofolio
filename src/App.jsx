@@ -208,7 +208,7 @@ function App() {
                 </h2>
 
                 <BlurText
-                  text="Undergraduate student of Singaperbangsa University Karawang, with a focus as a Web Developer and DevOps Engineer, with a track record of less than 1 year in website development. I am particularly interested in implementing Artificial Intelligence to create engaging, scalable, and high-performance digital solutions to drive your business growth."
+                  text="Undergraduate student of Singaperbangsa University Karawang, with a focus as a Web Developer. I started my journey in web development in 2022, I am particularly interested in implementing Artificial Intelligence to create engaging, scalable, and high-performance digital solutions to drive your business growth."
                   delay={150}
                   animateBy="words"
                   direction="top"
@@ -224,9 +224,9 @@ function App() {
                   </div>
                   <div>
                     <h1 className="text-3xl md:text-4xl mb-1">
-                      1<span className="text-teal-400">+</span>
+                      3<span className="text-teal-400">+</span>
                     </h1>
-                    <p>Years of Experience</p>
+                    <p>Years since First Coding</p>
                   </div>
                   <div data-aos="fade-up" data-aos-delay="200">
                     <h1 className="text-3xl md:text-4xl mb-1">
