@@ -5,10 +5,21 @@
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Font Poppins -->
+    <!-- Preconnect for external resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Preload critical assets for faster initial render -->
+    <link rel="preload" href="/assets/profile.png" as="image">
+    <link rel="preload" href="/assets/card.glb" as="fetch" crossorigin>
+    
+    <!-- Font Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Muhammad Rafi Catur Wijayanto - Web Developer Portfolio. Crafting modern, high-performance digital experiences.">
+    <meta name="keywords" content="web developer, portfolio, react, javascript, frontend">
+    <meta name="author" content="Muhammad Rafi Catur Wijayanto">
     
     <title>Rafi Portofolio</title>
   </head>

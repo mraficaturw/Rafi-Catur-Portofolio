@@ -92,7 +92,7 @@ const Navbar = ({ hidden = false }) => {
             <a
               ref={(el) => (itemRefs.current[index] = el)}
               href={item.href}
-              className="relative px-5 py-2.5 sm:text-base text-sm font-medium text-zinc-400 hover:text-white transition-all duration-300 rounded-full block group"
+              className="relative px-2 md:px-5 py-2.5 sm:text-base text-sm font-medium text-zinc-400 hover:text-white transition-all duration-300 rounded-full block group"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >

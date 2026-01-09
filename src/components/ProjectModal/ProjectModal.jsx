@@ -198,11 +198,11 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
           </button>
 
           {/* Project Image */}
-          <div className="project-image-container w-full h-48 sm:h-64">
+          <div className="project-image-container w-full h-56 sm:h-72">
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              className="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105"
             />
             {/* Shimmer effect overlay */}
             <div className="absolute inset-0 shimmer-effect pointer-events-none" />

@@ -1,5 +1,5 @@
 import { Renderer, Program, Mesh, Color, Triangle } from "ogl";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import './Aurora.css';
 
@@ -119,6 +119,25 @@ export default function Aurora(props) {
   propsRef.current = props;
 
   const ctnDom = useRef(null);
+  const [isVisible, setIsVisible] = useState(true);
+  const isVisibleRef = useRef(true);
+
+  // Track visibility for performance optimization
+  useEffect(() => {
+    const ctn = ctnDom.current;
+    if (!ctn) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+        isVisibleRef.current = entry.isIntersecting;
+      },
+      { threshold: 0.1, rootMargin: '50px' }
+    );
+
+    observer.observe(ctn);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const ctn = ctnDom.current;
@@ -176,6 +195,10 @@ export default function Aurora(props) {
     let animateId = 0;
     const update = (t) => {
       animateId = requestAnimationFrame(update);
+
+      // Skip rendering when off-screen for performance
+      if (!isVisibleRef.current) return;
+
       const { time = t * 0.01, speed = 1.0 } = propsRef.current;
       program.uniforms.uTime.value = time * speed * 0.1;
       program.uniforms.uAmplitude.value = propsRef.current.amplitude ?? 1.0;
