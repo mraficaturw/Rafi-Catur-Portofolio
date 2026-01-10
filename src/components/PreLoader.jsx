@@ -8,7 +8,7 @@ const PreLoader = () => {
   const [fadeText, setFadeText] = useState(false)
   const [fadeScreen, setFadeScreen] = useState(false)
 
-  // Hide scrollbar during preloader
+  // Hide scrollbar during preloader and scroll to top
   useEffect(() => {
     const html = document.documentElement
     const body = document.body
@@ -16,9 +16,12 @@ const PreLoader = () => {
     if (loading) {
       html.style.overflow = 'hidden'
       body.style.overflow = 'hidden'
+      // Scroll to top immediately when preloader is active
+      window.scrollTo(0, 0)
     } else {
       html.style.overflow = ''
       body.style.overflow = ''
+      // Position is already at top since scroll was blocked during preloader
     }
 
     // Cleanup on unmount
@@ -26,12 +29,34 @@ const PreLoader = () => {
       html.style.overflow = ''
       body.style.overflow = ''
     }
-  }, [loading])
+  }, [loading]);
+
+  // Ensure scroll is at top after preloader finishes
+  useEffect(() => {
+    if (!loading) {
+      window.scrollTo(0, 0);
+    }
+  }, [loading]);
+
+  // Initial scroll to top on mount (catches browser auto-scroll restoration)
+  useEffect(() => {
+    // Disable browser scroll restoration
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual'
+    }
+    // Force scroll to top immediately
+    window.scrollTo(0, 0)
+  }, [])
 
   useEffect(() => {
     if (countDone) {
       // Fade teks - reduced from 3000ms to 800ms
       const fadeTextTimer = setTimeout(() => setFadeText(true), 300)
+
+      // Scroll to top BEFORE fade starts (while preloader still covers screen)
+      const scrollTimer = setTimeout(() => {
+        window.scrollTo(0, 0)
+      }, 500)
 
       // Fade seluruh screen - reduced from 2000ms to 600ms
       const fadeScreenTimer = setTimeout(() => setFadeScreen(true), 600)
@@ -41,6 +66,7 @@ const PreLoader = () => {
 
       return () => {
         clearTimeout(fadeTextTimer)
+        clearTimeout(scrollTimer)
         clearTimeout(fadeScreenTimer)
         clearTimeout(hideTimer)
       }

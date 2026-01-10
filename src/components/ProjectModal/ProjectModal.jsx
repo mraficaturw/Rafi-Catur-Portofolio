@@ -6,16 +6,31 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    const html = document.documentElement;
+    const body = document.body;
+
     if (isOpen) {
-      document.body.style.overflow = "hidden";
+      // Lock scroll when modal opens
+      html.style.overflow = "hidden";
+      body.style.overflow = "hidden";
+      html.style.overflowX = "hidden";
+      body.style.overflowX = "hidden";
       // Delay for enter animation
       setTimeout(() => setIsVisible(true), 10);
     } else {
-      document.body.style.overflow = "unset";
+      // Restore scroll - use empty string to let CSS take over
+      html.style.overflow = "";
+      body.style.overflow = "";
+      // Keep overflow-x hidden to prevent horizontal scroll
+      html.style.overflowX = "hidden";
+      body.style.overflowX = "hidden";
       setIsVisible(false);
     }
     return () => {
-      document.body.style.overflow = "unset";
+      html.style.overflow = "";
+      body.style.overflow = "";
+      html.style.overflowX = "hidden";
+      body.style.overflowX = "hidden";
     };
   }, [isOpen]);
 
@@ -37,8 +52,8 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
   if (!isOpen && !isClosing) return null;
   if (!project) return null;
 
-  // Get theme color from project
-  const themeColor = project.borderColor || "#8B5CF6";
+  // Get theme color from project (use themeColor first, fallback to gradient extraction or default)
+  const themeColor = project.themeColor || "#14B8A6";
 
   return (
     <>
@@ -81,8 +96,12 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
         }
         
         @keyframes pulse-glow {
-          0%, 100% { box-shadow: 0 0 20px var(--glow-color), 0 0 40px var(--glow-color-dim); }
-          50% { box-shadow: 0 0 30px var(--glow-color), 0 0 60px var(--glow-color-dim); }
+          0%, 100% { 
+            box-shadow: 0 0 30px var(--glow-color), 0 0 60px var(--glow-color-dim), 0 0 100px var(--glow-color-outer);
+          }
+          50% { 
+            box-shadow: 0 0 50px var(--glow-color), 0 0 80px var(--glow-color-dim), 0 0 120px var(--glow-color-outer);
+          }
         }
         
         .modal-backdrop {
@@ -172,11 +191,13 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
         }}
       >
         <div
-          className={`relative bg-zinc-900 rounded-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden modal-content glow-border ${isClosing ? 'closing' : ''}`}
+          className={`relative rounded-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden modal-content glow-border ${isClosing ? 'closing' : ''}`}
           style={{
             border: `2px solid ${themeColor}`,
-            '--glow-color': `${themeColor}66`,
-            '--glow-color-dim': `${themeColor}33`,
+            background: `radial-gradient(ellipse at top, ${themeColor}15 0%, #18181b 50%, #18181b 100%)`,
+            '--glow-color': `${themeColor}80`,
+            '--glow-color-dim': `${themeColor}40`,
+            '--glow-color-outer': `${themeColor}20`,
           }}
         >
           {/* Gradient overlay at top */}

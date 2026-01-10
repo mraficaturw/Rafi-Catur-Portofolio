@@ -24,6 +24,11 @@
     <title>Rafi Portofolio</title>
   </head>
   <body class = "bg-zinc-900 text-white" id="home">
+    <!-- Scroll to top immediately before any content renders -->
+    <script>
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      window.scrollTo(0, 0);
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

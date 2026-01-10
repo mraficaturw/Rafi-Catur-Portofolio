@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 
 const Navbar = ({ hidden = false }) => {
   // ⛔ Saat hidden, jangan render apa pun
@@ -9,6 +9,7 @@ const Navbar = ({ hidden = false }) => {
   const [indicatorStyle, setIndicatorStyle] = useState({});
   const menuRef = useRef(null);
   const itemRefs = useRef([]);
+  const scrollTimer = useRef(null);
 
   const menuItems = [
     { label: "Home", href: "#home" },
@@ -19,9 +20,17 @@ const Navbar = ({ hidden = false }) => {
 
   useEffect(() => {
     const handleScroll = () => setActive(window.scrollY > 150);
-    handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    const debounced = () => {
+      if (scrollTimer.current) clearTimeout(scrollTimer.current);
+      scrollTimer.current = setTimeout(handleScroll, 100);
+    };
+    // Initial check
+    debounced();
+    window.addEventListener("scroll", debounced, { passive: true });
+    return () => {
+      if (scrollTimer.current) clearTimeout(scrollTimer.current);
+      window.removeEventListener("scroll", debounced);
+    };
   }, []);
 
   // Update indicator position on hover
