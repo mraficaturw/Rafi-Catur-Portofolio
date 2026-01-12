@@ -1,5 +1,5 @@
 import StaticBackground from "./StaticBackground"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import CountUp from "./CountUp/CountUp"
 
 const PreLoader = () => {
@@ -8,65 +8,94 @@ const PreLoader = () => {
   const [fadeText, setFadeText] = useState(false)
   const [fadeScreen, setFadeScreen] = useState(false)
 
-  // Hide scrollbar during preloader and scroll to top
+  // Initial setup: disable scroll restoration, clear hash, and scroll to top
+  useEffect(() => {
+    // Disable browser scroll restoration
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual'
+    }
+
+    // Clear any hash in URL to prevent auto-scroll to anchors
+    if (window.location.hash) {
+      history.replaceState(null, '', window.location.pathname + window.location.search)
+    }
+
+    // Reset scroll position immediately
+    document.documentElement.scrollTop = 0
+    document.body.scrollTop = 0
+  }, [])
+
+  // Freeze page completely during preloader
   useEffect(() => {
     const html = document.documentElement
     const body = document.body
 
     if (loading) {
+      // Save current scroll position (should be 0)
+      const scrollY = window.scrollY
+
+      // Freeze the page completely - no scroll possible
       html.style.overflow = 'hidden'
       body.style.overflow = 'hidden'
-      // Scroll to top immediately when preloader is active
-      window.scrollTo(0, 0)
+      body.style.position = 'fixed'
+      body.style.top = '0'
+      body.style.left = '0'
+      body.style.right = '0'
+      body.style.width = '100%'
+
+      // Force scroll to 0
+      document.documentElement.scrollTop = 0
+      document.body.scrollTop = 0
     } else {
-      html.style.overflow = ''
-      body.style.overflow = ''
-      // Position is already at top since scroll was blocked during preloader
+      // Unfreeze - reset body styles first
+      body.style.position = ''
+      body.style.top = ''
+      body.style.left = ''
+      body.style.right = ''
+      body.style.width = ''
+
+      // Reset scroll position to top before enabling scroll
+      document.documentElement.scrollTop = 0
+      document.body.scrollTop = 0
+
+      // Small delay before enabling scroll to ensure position is set
+      requestAnimationFrame(() => {
+        html.style.overflow = ''
+        body.style.overflow = ''
+
+        // Final scroll reset
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+      })
     }
 
     // Cleanup on unmount
     return () => {
       html.style.overflow = ''
       body.style.overflow = ''
+      body.style.position = ''
+      body.style.top = ''
+      body.style.left = ''
+      body.style.right = ''
+      body.style.width = ''
     }
   }, [loading]);
-
-  // Ensure scroll is at top after preloader finishes
-  useEffect(() => {
-    if (!loading) {
-      window.scrollTo(0, 0);
-    }
-  }, [loading]);
-
-  // Initial scroll to top on mount (catches browser auto-scroll restoration)
-  useEffect(() => {
-    // Disable browser scroll restoration
-    if ('scrollRestoration' in history) {
-      history.scrollRestoration = 'manual'
-    }
-    // Force scroll to top immediately
-    window.scrollTo(0, 0)
-  }, [])
 
   useEffect(() => {
     if (countDone) {
-      // Fade teks - reduced from 3000ms to 800ms
+      // Ensure scroll is at top before any fade animation (instant, no animation)
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+
+      // Fade teks
       const fadeTextTimer = setTimeout(() => setFadeText(true), 300)
 
-      // Scroll to top BEFORE fade starts (while preloader still covers screen)
-      const scrollTimer = setTimeout(() => {
-        window.scrollTo(0, 0)
-      }, 500)
-
-      // Fade seluruh screen - reduced from 2000ms to 600ms
+      // Fade seluruh screen - start after text fade
       const fadeScreenTimer = setTimeout(() => setFadeScreen(true), 600)
 
-      // Unmount preloader setelah animasi fade selesai - reduced from 3000ms to 1200ms
+      // Unmount preloader setelah animasi fade selesai
       const hideTimer = setTimeout(() => setLoading(false), 1200)
 
       return () => {
         clearTimeout(fadeTextTimer)
-        clearTimeout(scrollTimer)
         clearTimeout(fadeScreenTimer)
         clearTimeout(hideTimer)
       }
