@@ -189,7 +189,7 @@ export const listProyek = [
     image: Proyek1,
     title: "SIKARIR Web App",
     subtitle: "Full-stack internship platform connecting students with opportunities",
-    fullDescription: "Built a complete full-stack web application (Migration, Models, Controller, Middleware, View) for an internship information platform at a leading university in Karawang. Implemented the Filament admin panel for content management, allowing admins to add jobs without deployment. Optimized basic queries and caching to reduce the main page load time by up to 50%.",
+    fullDescription: "Built a complete Fullstack Web Application (Migration, Models, Controller, Middleware, View) for an internship information platform at one of the leading universities in Karawang. It is increase the number of campus partners and students who do internships even though they have not graduated by 20-45%. Implementing the Filament admin panel for content management so that admins can add vacancies without deploying. Optimizing basic queries and caching to reduce the main page load time by up to 50%.",
     gradient: "linear-gradient(145deg, #00B074, #000)",
     themeColor: "#00B074",
     url: "https://github.com/mraficaturw/",
