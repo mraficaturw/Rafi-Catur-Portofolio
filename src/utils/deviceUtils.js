@@ -17,19 +17,10 @@ export const isLowEndDevice = () => {
     // Device memory (in GB, only available in some browsers)
     const memory = navigator.deviceMemory || 4;
 
-    // Mobile device detection
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-
-    // Touch device with small screen (likely mobile)
-    const isSmallTouchDevice = 'ontouchstart' in window && window.innerWidth < 768;
-
-    // Consider low-end if:
-    // - Less than 4 cores AND less than 4GB memory
-    // - OR mobile device with less than 4 cores
-    // - OR small touch device
-    return (cores <= 2 && memory <= 2) ||
-        (isMobile && cores <= 4) ||
-        isSmallTouchDevice;
+    // Consider low-end only if:
+    // - Very limited hardware (2 cores or less AND 2GB or less memory)
+    // Note: Mobile devices with decent specs should still show Aurora animation
+    return (cores <= 2 && memory <= 2);
 };
 
 /**

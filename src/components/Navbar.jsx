@@ -1,15 +1,10 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const Navbar = ({ hidden = false }) => {
-  // ⛔ Saat hidden, jangan render apa pun
-  if (hidden) return null;
-
-  const [active, setActive] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [indicatorStyle, setIndicatorStyle] = useState({});
   const menuRef = useRef(null);
   const itemRefs = useRef([]);
-  const scrollTimer = useRef(null);
 
   const menuItems = [
     { label: "Home", href: "#home" },
@@ -17,21 +12,6 @@ const Navbar = ({ hidden = false }) => {
     { label: "Project", href: "#project" },
     { label: "Contact", href: "#contact" },
   ];
-
-  useEffect(() => {
-    const handleScroll = () => setActive(window.scrollY > 150);
-    const debounced = () => {
-      if (scrollTimer.current) clearTimeout(scrollTimer.current);
-      scrollTimer.current = setTimeout(handleScroll, 100);
-    };
-    // Initial check
-    debounced();
-    window.addEventListener("scroll", debounced, { passive: true });
-    return () => {
-      if (scrollTimer.current) clearTimeout(scrollTimer.current);
-      window.removeEventListener("scroll", debounced);
-    };
-  }, []);
 
   // Update indicator position on hover
   useEffect(() => {
@@ -52,6 +32,9 @@ const Navbar = ({ hidden = false }) => {
     }
   }, [hoveredIndex]);
 
+  // ⛔ Early return AFTER hooks to comply with Rules of Hooks
+  if (hidden) return null;
+
   return (
     <nav className="navbar relative z-50 py-6 flex items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-6">
       {/* Logo with glow effect */}
@@ -68,15 +51,13 @@ const Navbar = ({ hidden = false }) => {
       {/* Menu with premium effects */}
       <ul
         ref={menuRef}
-        className={`flex items-center sm:gap-2 gap-1 relative
-          md:static fixed left-1/2 -translate-x-1/2 md:translate-x-0 
+        className={`hidden md:flex items-center sm:gap-2 gap-1 relative
+          md:static
           md:opacity-100 
-          bg-zinc-900/80 backdrop-blur-xl border border-zinc-700/50
           md:bg-zinc-900/60 md:backdrop-blur-xl md:border md:border-zinc-700/40
           px-2 py-2 rounded-full
           shadow-[0_0_20px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.05)]
-          transition-all duration-500
-          ${active ? "top-4 opacity-100" : "-top-20 opacity-0 md:opacity-100"}`}
+          transition-all duration-500`}
       >
         {/* Sliding indicator background */}
         <div

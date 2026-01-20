@@ -92,8 +92,8 @@ function App() {
 
   return (
     <>
-      {/* Background - conditionally render heavy WebGL or lightweight CSS fallback */}
-      <div className="absolute top-0 left-0 w-full h-full -z-10 ">
+      {/* Aurora Background - fixed position but only visible in hero viewport area */}
+      <div className="fixed top-0 left-0 w-full h-screen -z-10 pointer-events-none">
         {useHeavyComponents ? (
           <Suspense fallback={<StaticBackground />}>
             <Aurora
@@ -106,10 +106,13 @@ function App() {
         ) : (
           <StaticBackground />
         )}
+        {/* Gradient fade overlay to create smooth transition */}
+        <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent" />
       </div>
+      
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div className="hero grid md:grid-cols-2 items-center pt-10 xl:gap-0 gap-6 grid-cols-1">
+        <div className="hero grid md:grid-cols-2 items-center pt-10 xl:gap-0 gap-6 grid-cols-1 relative">
           <div className="animate__animated animate__fadeInUp animate__delay-3s">
             {/* Quote Box - Premium Edition */}
             <div className="relative group w-fit mb-6">
@@ -182,7 +185,7 @@ function App() {
             </div>
 
           </div>
-          <div className="md:ml-auto animate__animated animate__fadeInUp animate__delay-4s">
+          <div className="md:ml-auto mx-auto md:mx-0 w-fit animate__animated animate__fadeInUp animate__delay-4s">
             <ProfileCard
               name="M. Rafi Catur W."
               title="Web Developer"

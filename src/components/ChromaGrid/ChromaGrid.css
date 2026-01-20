@@ -5,6 +5,7 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-auto-rows: auto;
   justify-content: center;
+  justify-items: center;
   gap: 1rem;
   max-width: 100%;
   padding: 4rem 1rem;
@@ -22,6 +23,7 @@
 @media (max-width: 1024px) {
   .chroma-grid {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-items: center;
     gap: 0.75rem;
     padding: 2rem 1rem;
   }
@@ -57,9 +59,11 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at var(--mouse-x) var(--mouse-y),
-      var(--spotlight-color),
-      transparent 70%);
+  background: radial-gradient(
+    circle at var(--mouse-x) var(--mouse-y),
+    var(--spotlight-color),
+    transparent 70%
+  );
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.5s ease;
