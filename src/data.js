@@ -211,7 +211,7 @@ export const listProyek = [
     image: Proyek3,
     title: "Tix Concert",
     subtitle: "Concert ticketing platform with cart management and payment gateway integration",
-    fullDescription: "Served as Frontend Developer for a 2025 personal e-commerce project, building the entire user interface with React and TypeScript. Implemented responsive UI components, persistent shopping cart functionality, Google authentication integration using Firebase, and seamless Midtrans payment gateway flow. Collaborated with the backend team using Golang and PostgreSQL to deliver a complete concert ticketing experience.",
+    fullDescription: "Served as Frontend Developer for a 2025 personal e-commerce project, building the entire user interface with React and TypeScript. Implemented responsive UI components, persistent shopping cart functionality, Google authentication integration using Firebase, and seamless Midtrans payment gateway flow.",
     gradient: "linear-gradient(145deg, #F97316, #000)",
     themeColor: "#F97316",
     url: "https://tix-concert.vercel.app",
