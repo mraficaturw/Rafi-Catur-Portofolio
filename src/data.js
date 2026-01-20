@@ -192,7 +192,7 @@ export const listProyek = [
     fullDescription: "Built a complete Fullstack Web Application (Migration, Models, Controller, Middleware, View) for an internship information platform at one of the leading universities in Karawang. It is increase the number of campus partners and students who do internships even though they have not graduated by 20-45%. Implementing the Filament admin panel for content management so that admins can add vacancies without deploying. Optimizing basic queries and caching to reduce the main page load time by up to 50%.",
     gradient: "linear-gradient(145deg, #00B074, #000)",
     themeColor: "#00B074",
-    url: "https://github.com/mraficaturw/",
+    url: "https://sikarir-umber.vercel.app",
     dad: "100",
   },
   {
@@ -203,7 +203,7 @@ export const listProyek = [
     fullDescription: "Personal portfolio site with dark themed modern UI animation with responsive layout built with React Vite JavaScript implementing glassmorphism plus real time Google sign in and ChatRoom implementation using Firebase Authentication and Firestore.",
     gradient: "linear-gradient(180deg, #14B8A6, #000)",
     themeColor: "#14B8A6",
-    url: "https://github.com/mraficaturw/",
+    url: "https://mraficw-portofolio.vercel.app",
     dad: "200",
   },
   {
@@ -211,10 +211,10 @@ export const listProyek = [
     image: Proyek3,
     title: "Tix Concert",
     subtitle: "Concert ticketing platform with cart management and payment gateway integration",
-    fullDescription: "2025 personal e-commerce project built with React and TypeScript and Golang backend, implementing persistent shopping cart, Google authentication using Firebase, PostgreSQL data storage, data storage in the form of files in Supabase, and Midtrans payment gateway integration.",
+    fullDescription: "Served as Frontend Developer for a 2025 personal e-commerce project, building the entire user interface with React and TypeScript. Implemented responsive UI components, persistent shopping cart functionality, Google authentication integration using Firebase, and seamless Midtrans payment gateway flow. Collaborated with the backend team using Golang and PostgreSQL to deliver a complete concert ticketing experience.",
     gradient: "linear-gradient(145deg, #F97316, #000)",
     themeColor: "#F97316",
-    url: "https://github.com/mraficaturw/TixConcert-frontend/",
+    url: "https://tix-concert.vercel.app",
     dad: "300",
   },
   {

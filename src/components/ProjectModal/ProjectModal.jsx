@@ -276,8 +276,17 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
                   boxShadow: `0 4px 20px ${themeColor}40`
                 }}
               >
-                <FiGithub size={18} />
-                <span>View Source Code</span>
+                {project.id == 1 || project.id == 2 || project.id == 3 ? (
+                  <>
+                    <FiExternalLink size={18} />
+                    <span>Live Demo</span>
+                  </>
+                ) : (
+                  <>
+                    <FiGithub size={18} />
+                    <span>Source Code</span>
+                  </>
+                )}
               </a>
 
               {project.liveUrl && (
