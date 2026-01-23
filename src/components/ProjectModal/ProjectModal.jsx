@@ -276,7 +276,7 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
                   boxShadow: `0 4px 20px ${themeColor}40`
                 }}
               >
-                {project.id == 1 || project.id == 2 || project.id == 3 ? (
+                {project.isHasDemo === true ? (
                   <>
                     <FiExternalLink size={18} />
                     <span>Live Demo</span>
