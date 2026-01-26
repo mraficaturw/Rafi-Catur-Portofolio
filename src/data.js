@@ -180,7 +180,7 @@ import Proyek4 from "/assets/proyek/proyek4.webp";
 import Proyek5 from "/assets/proyek/proyek5.webp";
 import Proyek6 from "/assets/proyek/proyek6.webp";
 import Proyek7 from "/assets/proyek/proyek7.webp";
-// import Proyek8 from "/assets/proyek/proyek8.webp";
+import Proyek8 from "/assets/proyek/proyek8.webp";
 // import Proyek9 from "/assets/proyek/proyek9.webp";
 
 export const listProyek = [
@@ -267,5 +267,17 @@ export const listProyek = [
     themeColor: "#0EA5E9",
     url: "https://invoice-generator-app-liard.vercel.app/",
     dad: "700",
+  },
+  {
+    id: 8,
+    isHasDemo: true,
+    image: Proyek8,
+    title: "Pilates Reservation App",
+    subtitle: "Quick and Simple Pilates Reservation",
+    fullDescription: "I designed and developed the user interface for the Pilates Reservation web application hosted at pilates-book-ashen.vercel.app. The interface focuses on simplicity, responsiveness, and a clear user flow so visitors can book a Pilates session in three intuitive steps including choosing a date, selecting a time, and confirming a studio. The project was built using Next.js, React.js, TypeScript, TailwindCSS version 3, and configured with ESLint to ensure code quality. This experience highlights my ability to build both visually appealing and user centric web applications that perform well and provide meaningful engagement data.",
+    gradient: "linear-gradient(145deg, #0FFFFF, #000)",
+    themeColor: "#0FFFFF",
+    url: "https://pilates-book-ashen.vercel.app/",
+    dad: "800",
   },
 ];
